@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urb. Las Dunas - Proyecto</title>
+  <link rel="icon" href="assets/img/LOGO2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="sistema/css/estilos.css">
+  <link rel="stylesheet" href="css/header2.css" />
+  <link rel="stylesheet" href="css/proyecto.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<!-- Lugar donde se insertará el header -->
+<div id="header-placeholder"></div>
+
+  <!-- Carrusel de Portada -->
+  <section class="carousel-top">
+    <div class="carousel-slide active">
+      <img src="assets/proyecto/1.jpg" alt="Imagen 1" />
+    </div>
+    <div class="carousel-slide">
+      <img src="assets/proyecto/2.jpg" alt="Imagen 2" />
+    </div>
+    <div class="carousel-slide">
+      <img src="assets/proyecto/3.jpg" alt="Imagen 2" />
+    </div>
+  </section>
+
+  <!-- Hero del Proyecto -->
+  <section class="proyecto-hero">
+    <div class="proyecto-info">
+      <h1>URBANIZACIÓN <br> LAS DUNAS</h1>
+      <p><strong>Nos encontramos en:</strong></p>
+      <p>Av. Juan Pablo Fernandini 312, Ica</p>
+      <p><strong>Nuestro horario de atención:</strong></p>
+      <p>Lunes a Viernes de 9:00 AM - 6:00 PM</p>
+      <p>Sábados de 9:00 AM - 1:00 PM</p>
+    </div>
+    <div class="precio-destacado">
+      <div class="precio-box">
+        <p class="desde">Precio desde</p>
+        <h2>S/ 560</h2>
+        <p class="mes">al mes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botones de Secciones -->
+  <div class="nav-secciones">
+    <button onclick="mostrarSeccion('descripcion')">Descripción</button>
+    <button onclick="mostrarSeccion('beneficios')">Beneficios</button>
+    <button onclick="mostrarSeccion('galeria')">Galería</button>
+    <button onclick="mostrarSeccion('ubicacion')">Ubicación</button>
+  </div>
+
+  <!-- Sección Descripción -->
+  <section class="seccion-activa descripcion"  id="descripcion">
+    <div class="card-desc">
+      <h2>Sobre Nuestro Proyecto</h2>
+      <p>La Urbanización Las Dunas es un desarrollo habitacional planificado que incorpora criterios de ordenamiento urbano, funcionalidad 
+        y adaptación al entorno desértico. Su diseño contempla una red vial estructurada con calles amplias, banquetas adoquinadas y 
+        alumbrado público moderno, además de áreas verdes distribuidas estratégicamente para mejorar el confort térmico y visual.
+        <br>
+        <br>El proyecto incluye espacios públicos de integración social, como parques con senderos peatonales, zonas de estancia, mobiliario urbano y vegetación ornamental.
+         Asimismo, se identifica infraestructura complementaria destinada a usos comunitarios, lo que refuerza el carácter integral de la urbanización.
+         En conjunto, Las Dunas se presenta como una propuesta urbana ordenada, segura y sustentable, orientada a ofrecer calidad de vida a sus residentes en armonía con el paisaje natural circundante.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Beneficios -->
+  <section class="seccion-oculta beneficios" id="beneficios">
+    <h2>Disfruta con todo equipado</h2>
+    <div class="icon-cards">
+    <div class="card">
+      <center>
+        <i class="fa-solid fa-house-circle-check"></i>
+        <p>Título de Propiedad</p>
+      </center>
+    </div>
+    <div class="card">
+      <center>
+        <i class="fa-solid fa-lightbulb"></i>
+        <p>Servicios completos</p>
+      </center>
+    </div>
+    <div class="card">
+      <center>
+       <i class="fa-solid fa-child-reaching"></i>
+       <p>Juegos para niños</p> 
+      </center>
+    </div>
+    <div class="card">
+     <center> 
+      <i class="fa-solid fa-tree"></i>
+      <p>Parques</p> 
+     </center>
+    </div>
+    <div class="card">
+     <center>
+      <i class="fa-solid fa-bicycle"></i>
+      <p>Ciclovía</p>
+     </center>
+    </div>
+  </div>
+  </section>
+
+  <!-- Sección Galería -->
+  <section class="seccion-oculta galeria" id="galeria">
+    <h2>Galería del Proyecto</h2>
+
+    <div class="galeria-principal">
+      <img id="imagenPrincipal" src="assets/proyecto/galeria/1.jpg" alt="Imagen Principal" />
+    </div>
+
+    <div class="mini-galeria">
+      <img src="assets/proyecto/galeria/1.jpg" alt="img1" onclick="cambiarImagen(this)">
+      <img src="assets/proyecto/galeria/2.jpg" alt="img2" onclick="cambiarImagen(this)">
+      <img src="assets/proyecto/galeria/3.jpg" alt="img3" onclick="cambiarImagen(this)">
+      <img src="assets/proyecto/galeria/5.jpg" alt="img5" onclick="cambiarImagen(this)">
+      <img src="assets/proyecto/galeria/6.jpg" alt="img6" onclick="cambiarImagen(this)">
+      <img src="assets/proyecto/galeria/8.jpg" alt="img8" onclick="cambiarImagen(this)">
+      <img src="assets/proyecto/galeria/9.jpg" alt="img9" onclick="cambiarImagen(this)">
+    </div>
+  </section>
+
+  <!-- Sección Ubicación -->
+  <section id="ubicacion" class="seccion-oculta ubicacion">
+    <h2>Ubicación del Proyecto</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14714.40456177454!2d-75.83058272855561!3d-14.071864439707124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e5322d5ec0bd%3A0x10d2f08564d83b31!2sUrb.%20Las%20Dunas%20de%20Carhuaz!5e1!3m2!1ses!2spe!4v1752866869120!5m2!1ses!2spe" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <center><p>Kilómetro 9.5 de la carretera Carhuaz - Ica</p></center>
+  </section>
+
+    <!-- Modal del formulario -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar">&times;</span>
+      
+      <!-- NUEVO TÍTULO -->
+      <center><h2 style="color: #3E6C3E; font-size: 22px; margin-bottom: 10px;">
+        Para mayor información
+      </h2></center>
+
+      <!-- NUEVO SUBTEXTO -->
+      <p style="text-align: center; margin-top: -10px; margin-bottom: 20px; font-size: 15px;">
+        Rellene este formulario y nos pondremos en contacto con usted
+      </p>
+
+      <form action="sistema/guardar_cliente.php" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <input type="text" name="dni" placeholder="DNI" required 
+              pattern="[0-9]{8}" 
+              title="El DNI debe tener 8 dígitos"
+              maxlength="8">
+        <input type="number" name="edad" placeholder="Edad" required>
+        <input type="text" name="departamento" placeholder="Departamento" required>
+        <input type="text" name="provincia" placeholder="Provincia" required>
+        <input type="text" name="ciudad" placeholder="Ciudad" required>
+        <input type="text" name="telefono" placeholder="Teléfono" required 
+              pattern="[0-9]{9}" 
+              title="El número debe tener 9 dígitos"
+              maxlength="9"> 
+
+        <select name="interes" required>
+          <option value="">¿Qué te intereso?</option>
+          <option value="Proyecto Las Dunas De Carhuaz">Proyecto Las Dunas De Carhuaz</option>
+          <option value="Proyecto Planicie De Costa Sur">Proyecto La Planicie De Costa Sur</option>
+          <option value="Casa Vivienda Girasol">Casa Vivienda Girasol</option>
+          <option value="Casa Vivienda Rosas">Casa Vivienda Rosas</option>
+          <option value="Casa Vivienda Esmeralda">Casa Vivienda Esmeralda</option>
+        </select>
+
+        <button type="submit" class="btn-guardar">Enviar</button>
+      </form>
+
+    </div>
+  </div>   
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  
+      <a href="https://wa.me/51981592217?text=Hola%2C%20quisiera%20más%20información"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escríbenos por WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+      </a>
+
+  <!-- Scripts -->
+  <script src="/js/load-components.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Script del modal -->
+  <script src="sistema/js/modal.js"></script>
+
+  <script>
+    const secciones = document.querySelectorAll("section[id]");
+    function mostrarSeccion(id) {
+      secciones.forEach(s => {
+        s.classList.add("seccion-oculta");
+        s.classList.remove("seccion-activa");
+      });
+      document.getElementById(id).classList.add("seccion-activa");
+    }
+
+    // Carrusel
+    document.addEventListener("DOMContentLoaded", () => {
+      let paused = false;
+      const slides = document.querySelectorAll(".carousel-slide");
+      let current = 0;
+      document.querySelector(".carousel-top").addEventListener("mouseenter", () => paused = true);
+      document.querySelector(".carousel-top").addEventListener("mouseleave", () => paused = false);
+      setInterval(() => {
+        if (!paused) {
+          slides[current].classList.remove("active");
+          current = (current + 1) % slides.length;
+          slides[current].classList.add("active");
+        }
+      }, 3000);
+    });
+  </script>
+
+  <script>
+    function cambiarImagen(imagenMiniatura) {
+      const imagenPrincipal = document.getElementById("imagenPrincipal");
+
+      // Aplicar fade-out
+      imagenPrincipal.classList.add("fade-out");
+
+      // Esperar el tiempo de transición y cambiar la imagen
+      setTimeout(() => {
+        imagenPrincipal.src = imagenMiniatura.src;
+        imagenPrincipal.classList.remove("fade-out");
+      }, 400); // Debe ser un poco menor que el tiempo del CSS para suavidad
+    }
+  </script>
+
+    <script>
+  // Cargar componentes HTML en sus contenedores
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("components/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("components/loader.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("loader-placeholder").innerHTML = data);
+
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  });
+</script>
+  
+</body>
+</html>

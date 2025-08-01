@@ -1,0 +1,131 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f9f6; /* fondo suave */
+  color: #2d2d2d;
+  line-height: 1.6;
+  padding-top: 100px; /* espacio para header fijo */
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.contact-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+/* === TÍTULO === */
+.contact-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2b502b;
+}
+
+/* === FORMULARIO === */
+.info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* === FILAS DE CAMPOS === */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.row input,
+.row .phone-group {
+  flex: 1;
+}
+
+/* === CAMPOS DE ENTRADA === */
+input,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3e6c3e;
+}
+
+/* === SELECT PAÍS + TELÉFONO === */
+.phone-group {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-group select {
+  width: 80px;
+  flex: none;
+}
+
+/* === CHECKBOX === */
+.form-terms {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  accent-color: #3e6c3e;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-container a {
+  color: #0f5298;
+  text-decoration: underline;
+}
+
+/* === BOTÓN SUBMIT === */
+.submit-btn {
+  background-color: #3e6c3e;
+  color: white;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2b502b;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .phone-group {
+    flex-direction: column;
+  }
+}
+

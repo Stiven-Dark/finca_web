@@ -1,0 +1,43 @@
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="header-left">
+      <a href="index.html">
+        <img src="assets/img/logo.png" alt="La Finca de Carhuaz" class="logo">
+      </a>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+
+    <!-- Menú de navegación -->
+    <nav class="header-center" id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#proyecto">Proyecto</a></li>
+        <li><a href="index.html#proyecto">Casas</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón de acceso -->
+    <div class="header-login">
+      <a href="sistema/login.php" class="boton_login">Acceso</a>
+    </div>
+
+    <!-- Botón contáctanos -->
+<div class="header-right">
+  <button onclick="window.location.href='contact.html'" class="btn-header">Contáctanos</button>
+</div>
+
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.header-center');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contáctanos - La Finca de Carhuaz</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contacto.css" />
+</head>
+<body>
+
+  <!-- HEADER DINÁMICO -->
+  <header class="header" id="main-header"></header>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section class="contact-box">
+    <h2>Quiero recibir información</h2>
+
+    <form class="info-form">
+      <!-- Nombre y Apellido -->
+      <div class="row">
+        <input type="text" placeholder="Nombre*" required />
+        <input type="text" placeholder="Apellidos*" required />
+      </div>
+
+      <!-- Documento y Teléfono -->
+      <div class="row">
+        <input type="text" placeholder="Nro. de documento*" required />
+        <div class="phone-group">
+          <select>
+            <option value="+51">+51</option>
+          </select>
+          <input type="tel" placeholder="Teléfono*" required />
+        </div>
+      </div>
+
+      <!-- Correo -->
+      <input type="email" placeholder="Correo electrónico*" required />
+
+      <!-- Ubicación -->
+      <select required>
+        <option disabled selected>Ubicación</option>
+        <option value="Carhuaz">Carhuaz</option>
+        <option value="Huaraz">Huaraz</option>
+      </select>
+
+      <!-- Proyectos -->
+      <select disabled>
+        <option>No hay proyectos disponibles</option>
+      </select>
+
+      <!-- Términos -->
+      <div class="form-terms">
+        <label class="checkbox-container">
+          <input type="checkbox" required />
+          <span class="checkmark"></span>
+          He leído y acepto el
+          <a href="#">Tratamiento de mis datos personales.</a>
+        </label>
+      </div>
+
+      <!-- Botón -->
+      <button class="submit-btn" type="submit">Solicitar información</button>
+    </form>
+  </section>
+
+  <!-- FOOTER DINÁMICO -->
+  <footer id="main-footer"></footer>
+
+  <!-- JS DINÁMICO -->
+  <script src="js/load-components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

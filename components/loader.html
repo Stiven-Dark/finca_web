@@ -1,0 +1,29 @@
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-content">
+    <img src="assets/img/logo.png" alt="Logo" width="120" height="120" />
+  </div>
+</div>
+
+<!-- Script del loader -->
+<script>
+  // Ocultar loader después de que la página haya cargado
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 1000); // Puedes ajustar el tiempo si deseas
+  });
+
+  // Mostrar loader al hacer clic en enlaces internos (no anclas ni target=_blank)
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a").forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("#") && !href.startsWith("javascript") && link.target !== "_blank") {
+        link.addEventListener("click", () => {
+          document.getElementById("loader").classList.remove("hidden");
+        });
+      }
+    });
+  });
+</script>

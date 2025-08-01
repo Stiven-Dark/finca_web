@@ -1,0 +1,93 @@
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container container">
+
+    <!-- Columna 1: Logo y redes -->
+    <div class="footer-col">
+      <a href="index.html">
+        <img src="assets/img/LOGO2.png" alt="Logo La Finca de Carhuaz" class="footer-logo" />
+      </a>
+      <p>Razón Social: LA FINCA DE CARHUAZ E.I.R.L.C.</p>
+      <p>RUC: 20603168586</p>
+
+      <div class="footer-social">
+        <a href="https://www.facebook.com/FincadeCarhuaz?mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/fincadecarhuaz?igsh=bjQ2bTg0YnRxM2dj" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/@lafincadecarhuazinmobiliar2567" target="_blank" aria-label="YouTube">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+        </a>
+        <a href="https://www.tiktok.com/@lafincadecarhuaz2?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna 2: Contacto y mapa -->
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>📞 (+51) 981 592 217</p>
+      <p>📍 Av. Juan Pablo Fernandini 312 - Ica</p>
+
+      <div class="mapa-footer">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.0333064626384!2d-75.72810202513779!3d-14.075210586351252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e29079f02825%3A0xc8111ee6810e277!2sJuan%20Pablo%20Fernandini%20312%2C%20Ica%2011001!5e0!3m2!1sen!2spe!4v1753973680825!5m2!1sen!2spe"
+          width="100%" height="180" style="border:0; border-radius: 8px; margin-top: 10px;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+
+    <!-- Columna 3: Proyectos -->
+    <div class="footer-col">
+      <h4>Proyectos</h4>
+      <ul>
+        <li><a href="dunas.html">Urb. Las Dunas</a></li>
+        <li><a href="planicie.html">Planicies de Costa Sur</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 4: Casas -->
+    <div class="footer-col">
+      <h4>Casas Viviendas</h4>
+      <ul>
+        <li><a href="vivienda_girasol.html">Casas Vivienda Girasol</a></li>
+        <li><a href="vivienda_rosas.html">Casas Vivienda Rosas</a></li>
+        <li><a href="vivienda_esmeralda.html">Casas Vivienda Esmeralda</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Pie de página -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 La Finca de Carhuaz — Todos los derechos reservados |
+      <a href="components/term.pdf">Términos y condiciones</a> |
+      <a href="components/pol.pdf">Políticas de privacidad</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const numero = "51981592217";
+    const hora = new Date().getHours();
+    
+    let saludo = "Hola";
+    if (hora < 12) saludo = "Buenos días";
+    else if (hora < 18) saludo = "Buenas tardes";
+    else saludo = "Buenas noches";
+
+    const mensaje = `${saludo}, estoy interesado en sus servicios.`;
+    const enlace = document.querySelector(".whatsapp-float");
+
+    if (enlace) {
+      const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
+      enlace.setAttribute("href", url);
+    }
+  });
+</script>

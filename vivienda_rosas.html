@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casas en Venta - La Finca de Carhuaz</title>
+  <link rel="icon" href="assets/img/LOGO2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header2.css">
+  <link rel="stylesheet" href="css/casas.css" />
+  <link rel="stylesheet" href="sistema/css/estilos.css">
+  <link rel="stylesheet" href="css/loader.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- HEADER DINÁMICO -->
+   <div id="header-placeholder"></div>
+
+
+  <!-- HERO DE CASAS -->
+  <section class="hero-casas">
+      <div class="hero-wrapper">
+      <h1>Casas Vivienda Rosas</h1>
+      <p>Ideal para quienes valoran la comodidad, el diseño moderno y espacios pensados para disfrutar cada momento en casa.</p>
+    </div>
+  </section>
+
+  <!-- DETALLE DE CASA -->
+  <section class="detalle-casa container">
+    <div class="detalle-grid">
+      <div class="detalle-media">
+        <img src="assets/img_casa/casa2/portada.jpg" alt="Casa en Carhuaz" />
+      </div>
+      <div class="detalle-info">
+       <!-- <h2>Casa Vivienda Rosas</h2>
+        <p class="concepto">Ideal para quienes valoran la comodidad, el diseño moderno y espacios pensados para disfrutar cada momento en casa.</p>-->
+        <ul class="detalles-lista">
+          <li><strong>📍Ubicación:</strong> Urb. Las Dunas de Carhuaz, Primera Etapa - Av. Santa Rosa</li>
+          <li><strong>📐Área Construida:</strong> 120 m²</li>
+          <li><strong>🛋️Distribución:</strong> Sala-Comedor, 2 Dormitorios, Cocina, SS.HH, Lavanderia</li>
+          <li><strong>💡Servicios:</strong> Agua, luz, desagüe</li>
+        </ul>
+        <div class="precio-box">
+        <p class="precio-label">Precio desde:</p>
+        <p class="precio-monto">S/ <span>129,500</span></p>
+        <p class="precio-inicial">Con Incial del <strong>20%</strong></p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Puedes duplicar la sección anterior para más casas -->
+    <section class="galeria-vivienda">
+    <div class="miniaturas">
+        <img src="assets/img_casa/casa2/1.jpg" onclick="mostrarImagen(this)" alt="Casa 1" />
+        <img src="assets/img_casa/casa2/2.jpg" onclick="mostrarImagen(this)" alt="Casa 1" />
+        <img src="assets/img_casa/casa2/3.jpg" onclick="mostrarImagen(this)" alt="Casa 1" />
+        <img src="assets/img_casa/casa2/4.jpg" onclick="mostrarImagen(this)" alt="Casa 1" />
+        <img src="assets/img_casa/casa2/5.jpg" onclick="mostrarImagen(this)" alt="Casa 1" />
+    </div>
+
+    <div class="imagen-grande">
+        <img id="imagenPrincipal" src="assets/img_casa/casa2/5.jpg" alt="Imagen seleccionada" />
+    </div>
+    </section>
+
+  <!-- Modal del formulario -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar">&times;</span>
+      
+      <!-- NUEVO TÍTULO -->
+      <center><h2 style="color: #3E6C3E; font-size: 22px; margin-bottom: 10px;">
+        Para mayor información
+      </h2></center>
+
+      <!-- NUEVO SUBTEXTO -->
+      <p style="text-align: center; margin-top: -10px; margin-bottom: 20px; font-size: 15px;">
+        Rellene este formulario y nos pondremos en contacto con usted
+      </p>
+
+      <form action="sistema/guardar_cliente.php" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <input type="text" name="dni" placeholder="DNI" required 
+              pattern="[0-9]{8}" 
+              title="El DNI debe tener 8 dígitos"
+              maxlength="8">
+        <input type="number" name="edad" placeholder="Edad" required>
+        <input type="text" name="departamento" placeholder="Departamento" required>
+        <input type="text" name="provincia" placeholder="Provincia" required>
+        <input type="text" name="ciudad" placeholder="Ciudad" required>
+        <input type="text" name="telefono" placeholder="Teléfono" required 
+              pattern="[0-9]{9}" 
+              title="El número debe tener 9 dígitos"
+              maxlength="9"> 
+
+        <select name="interes" required>
+          <option value="">¿Qué te intereso?</option>
+          <option value="Proyecto Las Dunas De Carhuaz">Proyecto Las Dunas De Carhuaz</option>
+          <option value="Proyecto Planicie De Costa Sur">Proyecto La Planicie De Costa Sur</option>
+          <option value="Casa Vivienda Girasol">Casa Vivienda Girasol</option>
+          <option value="Casa Vivienda Rosas">Casa Vivienda Rosas</option>
+          <option value="Casa Vivienda Esmeralda">Casa Vivienda Esmeralda</option>
+        </select>
+
+        <button type="submit" class="btn-guardar">Enviar</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- FOOTER DINÁMICO -->
+  <div id="footer-placeholder"></div>
+
+      <a href="https://wa.me/51981592217?text=Hola%2C%20quisiera%20más%20información"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escríbenos por WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+      </a>
+      
+  <!-- Script del modal -->
+  <script src="sistema/js/modal.js"></script>
+  <script src="js/load-components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+<script>
+function mostrarImagen(elemento) {
+  const imagen = document.getElementById("imagenPrincipal");
+  imagen.classList.add("fade");
+  setTimeout(() => {
+    imagen.src = elemento.src;
+    imagen.alt = elemento.alt;
+    imagen.classList.remove("fade");
+  }, 300); // mismo tiempo que el CSS
+}
+</script>
+
+<script>
+  // Cargar componentes HTML en sus contenedores
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("components/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("components/loader.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("loader-placeholder").innerHTML = data);
+
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  });
+</script>
+
+</html>

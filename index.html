@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - La Finca de Carhuaz</title>
+  <link rel="icon" href="assets/img/LOGO2.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="sistema/css/estilos.css" />
+  <link rel="stylesheet" href="css/header2.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Lugar donde se insertará el header -->
+<div id="header-placeholder"></div>
+
+<!-- Lugar donde se insertará el loader -->
+
+  <!-- HERO PRINCIPAL -->
+  <section class="hero-centrado">
+    <img src="assets/img/26.jpg" class="hero-bg" alt="Fondo Hero">
+    <div class="hero-contenido">
+      <div class="hero-texto-logo">
+        <div class="texto">
+          <center>
+            <h1>La Finca de Carhuaz</h1>
+            <p>Construimos más que casas, creamos hogares.<br>Haz realidad el sueño de vivir como siempre imaginaste.</p>
+          </center>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARJETAS DE OPCIONES -->
+  <section class="opciones-section" id="proyecto">
+    <div class="container-opciones">
+      <div class="opcion-card" onclick="mostrarSeccion('proyectos')">
+        <img src="assets/img/26.3.jpg" alt="Proyectos" />
+        <h2>Nuestros Proyectos</h2>
+      </div>
+      <div class="opcion-card" onclick="mostrarSeccion('casas')">
+        <img src="assets/img/27.jpg" alt="Modelos de Casa" />
+        <h2>Modelos de Casa</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO DINÁMICO: Proyectos -->
+  <section id="seccion-proyectos" class="contenido-dinamico" style="display: none;">
+    <h2 class="titulo-seccion">Nuestros Proyectos</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/proyecto/proyecto1.png" alt="Proyecto 1" />
+        <div class="project-info">
+          <h3>LAS DUNAS DE CARHUAZ</h3>
+          <p>Carretera Carhuaz - Comatrana - Ica</p>
+          <a href="dunas.html" class="btn-sm">Ver más</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/proyecto2/port.jpg" alt="Proyecto 2" />
+        <div class="project-info">
+          <h3>PLANICIES DE COSTA SUR</h3>
+          <p>Punta Lomitas - Ocucaje - Ica</p>
+          <a href="planicie.html" class="btn-sm">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO DINÁMICO: Casas -->
+  <section id="seccion-casas" class="contenido-dinamico" style="display: none;">
+    <h2 class="titulo-seccion">Modelos de Casa</h2>
+    <div class="casas-grid">
+      <div class="casa-card">
+        <img src="assets/img_casa/girasol/1.jpg" alt="Casa 1" />
+        <div class="casa-info">
+          <h3>Casa Vivienda Girasol</h3>
+          <p>Urb. Las Dunas de Carhuaz</p>
+          <a href="vivienda_girasol.html" class="btn-casa">Ver más</a>
+        </div>
+      </div>
+      <div class="casa-card">
+        <img src="assets/img_casa/casa2/portada.jpg" alt="Casa 2" />
+        <div class="casa-info">
+          <h3>Casa Vivienda Rosas</h3>
+          <p>Urb. Las Dunas de Carhuaz</p>
+          <a href="vivienda_rosas.html" class="btn-casa">Ver más</a>
+        </div>
+      </div>
+      <div class="casa-card">
+        <img src="assets/img_casa/casa3/portada.png" alt="Casa 3" />
+        <div class="casa-info">
+          <h3>Casa Vivienda Esmeralda</h3>
+          <p>Urb. Residencial Luisiana</p>
+          <a href="vivienda_esmeralda.html" class="btn-casa">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN NOSOTROS -->
+  <section id="nosotros" class="nosotros-section">
+    <h2>Nosotros</h2>
+    <p class="descripcion">
+      Somos una empresa con más de cuatro años de experiencia en el sector inmobiliario...
+    </p>
+    <div class="nosotros-wrapper">
+      <div class="carrusel-box" id="carrusel">
+        <img src="assets/img/carrusel1.jpg" alt="Imagen 1" class="slide active" />
+        <img src="assets/img/carrusel2.jpg" alt="Imagen 2" class="slide" />
+        <img src="assets/img/carrusel3.jpg" alt="Imagen 3" class="slide" />
+      </div>
+      <div class="nosotros-contadores">
+        <div class="contador"><span class="numero" data-target="4">4</span><p>Años de experiencia</p></div>
+        <div class="contador"><span class="numero" data-target="1000">1000</span><p>Familias satisfechas</p></div>
+        <div class="contador"><span class="numero" data-target="2">2</span><p>Proyectos ejecutados</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar">&times;</span>
+      <center><h2 style="color: #3E6C3E;">Para mayor información</h2></center>
+      <p style="text-align: center;">Rellene este formulario y nos pondremos en contacto con usted</p>
+      <form action="#" method="POST"> <!-- Ruta de acción eliminada por ser PHP -->
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <input type="text" name="dni" placeholder="DNI" required maxlength="8" pattern="[0-9]{8}">
+        <input type="number" name="edad" placeholder="Edad" required>
+        <input type="text" name="departamento" placeholder="Departamento" required>
+        <input type="text" name="provincia" placeholder="Provincia" required>
+        <input type="text" name="ciudad" placeholder="Ciudad" required>
+        <input type="text" name="telefono" placeholder="Teléfono" required maxlength="9" pattern="[0-9]{9}">
+        <select name="interes" required>
+          <option value="">¿Qué te intereso?</option>
+          <option value="Proyecto Las Dunas De Carhuaz">Proyecto Las Dunas De Carhuaz</option>
+          <option value="Proyecto Planicie De Costa Sur">Proyecto Planicie De Costa Sur</option>
+          <option value="Casa Vivienda Girasol">Casa Vivienda Girasol</option>
+          <option value="Casa Vivienda Rosas">Casa Vivienda Rosas</option>
+          <option value="Casa Vivienda Esmeralda">Casa Vivienda Esmeralda</option>
+        </select>
+        <button type="submit" class="btn-guardar">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER DINÁMICO -->
+<div id="footer-placeholder"></div>
+
+
+      <a href="https://wa.me/51981592217?text=Hola%2C%20quisiera%20más%20información"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escríbenos por WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+      </a>
+  <!-- Scripts -->
+  <script src="js/load-components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="sistema/js/modal.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll('.numero');
+      counters.forEach(counter => {
+        const target = +counter.dataset.target;
+        let count = 0;
+        const speed = 40;
+        const updateCounter = () => {
+          const increment = Math.ceil(target / speed);
+          if (count < target) {
+            count += increment;
+            if (count > target) count = target;
+            counter.innerText = count;
+            setTimeout(updateCounter, 30);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCounter();
+      });
+    });
+
+    let seccionActual = null;
+    function mostrarSeccion(seccion) {
+      const secciones = ["proyectos", "casas"];
+      secciones.forEach(s => {
+        const elemento = document.getElementById("seccion-" + s);
+        if (seccion === s) {
+          if (seccionActual === s) {
+            elemento.style.display = "none";
+            seccionActual = null;
+          } else {
+            elemento.style.display = "block";
+            seccionActual = s;
+          }
+        } else {
+          elemento.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+  <script>
+  // Cargar componentes HTML en sus contenedores
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("components/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("components/loader.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("loader-placeholder").innerHTML = data);
+
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  });
+</script>
+
+</body>
+</html>

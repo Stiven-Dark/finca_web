@@ -1,0 +1,184 @@
+/* ===== HEADER GENERAL ===== */
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+}
+
+/* ===== CONTENEDOR ===== */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 30px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  height: 45px;
+  object-fit: contain;
+}
+
+/* ===== NAVEGACIÓN ===== */
+.header-center {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #3E6C3E;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2b502b;
+}
+
+/* ===== BOTÓN CONTÁCTANOS ===== */
+.btn-header {
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #3E6C3E;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  line-height: 1;
+}
+
+.btn-header:hover {
+  background-color: #2b502b;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3E6C3E;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger:hover {
+  background-color: rgba(62, 108, 62, 0.1);
+}
+
+.boton_login {
+  background-color: transparent;
+  color: #3E6C3E; /* Mismo verde que en el menú */
+  padding: 10px 20px;
+  border: 1px solid #3E6C3E;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600; /* Seminegrita */
+  font-size: 15px;
+  margin-right: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.boton_login:hover {
+  background-color: rgba(62, 108, 62, 0.1); /* verde muy claro al pasar el mouse */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3E6C3E;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .header-center {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header-center.open {
+    display: flex;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .boton_login {
+    background-color: #f3f6f3;
+    color: #3E6C3E;
+    border: 1px solid #3E6C3E;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .boton_login:hover {
+    background-color: #e8f0e8;
+  }
+
+  .btn-header {
+    background-color: #3E6C3E;
+    color: white;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .btn-header:hover {
+    background-color: #2b502b;
+  }
+}

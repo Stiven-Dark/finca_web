@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-casas {
+  background-color: #e9f2e9;
+  padding: 80px 20px 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-casas h1 {
+  font-size: 3.2rem;
+  color: #2b502b;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 2;
+}
+
+.hero-casas p {
+  font-size: 1.25rem;
+  color: #444;
+  margin-top: 0;
+}
+
+.detalle-casa {
+  padding: 60px 20px;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.detalle-media img,
+.detalle-media video {
+  width: 400px;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-info h2 {
+  font-size: 1.8rem;
+  color: #3E6C3E;
+  margin-bottom: 10px;
+}
+
+.concepto {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.detalles-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.detalles-lista li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.precio-desde {
+  font-size: 1.2rem;
+  color: #2b502b;
+}
+
+.precio-desde strong {
+  font-size: 1.6rem;
+  margin-left: 10px;
+  color: #e06b2c;
+}
+
+.galeria-vivienda {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.imagen-grande {
+  margin-top: 30px;
+}
+
+.imagen-grande img {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  border-radius: 12px;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.imagen-grande img.fade {
+  opacity: 0;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.miniaturas img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miniaturas img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.precio-box {
+  background: #f9fef8;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.precio-label {
+  font-size: 1rem;
+  color: #3E6C3E;
+  margin-bottom: 8px;
+}
+
+.precio-monto {
+  font-size: 2rem;
+  color: #e06b2c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.precio-monto span {
+  font-size: 2.2rem;
+}
+
+.precio-inicial {
+  font-size: 0.95rem;
+  color: #2d4a22;
+}

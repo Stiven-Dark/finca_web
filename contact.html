@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="sistema/css/estilos.css" />
+  <link rel="stylesheet" href="css/header2.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <title>Contáctanos - Fincas Carhuaz</title>
+
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contenido {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 80px auto; /* Margen superior e inferior agregado */
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .contenido h2 {
+      color: #3E6C3E;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .btn-guardar {
+      background-color: #3E6C3E;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn-guardar:hover {
+      background-color: #345a34;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+<div id="header-placeholder"></div>
+
+  <!-- FORMULARIO -->
+  <main>
+    <div class="contenido">
+      <h2>Para mayor información</h2>
+      <p>Rellene este formulario y nos pondremos en contacto con usted</p>
+
+      <form id="formContacto" action="https://formsubmit.co/TU_CORREO@gmail.com" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <input type="text" name="dni" placeholder="DNI" required maxlength="8" pattern="[0-9]{8}">
+        <input type="number" name="edad" placeholder="Edad" required>
+        <input type="text" name="departamento" placeholder="Departamento" required>
+        <input type="text" name="provincia" placeholder="Provincia" required>
+        <input type="text" name="ciudad" placeholder="Ciudad" required>
+        <input type="text" name="telefono" placeholder="Teléfono" required maxlength="9" pattern="[0-9]{9}">
+
+        <select name="interes" required>
+          <option value="">¿Qué te interesó?</option>
+          <option value="Proyecto Las Dunas De Carhuaz">Proyecto Las Dunas De Carhuaz</option>
+          <option value="Proyecto Planicie De Costa Sur">Proyecto Planicie De Costa Sur</option>
+          <option value="Casa Vivienda Girasol">Casa Vivienda Girasol</option>
+          <option value="Casa Vivienda Rosas">Casa Vivienda Rosas</option>
+          <option value="Casa Vivienda Esmeralda">Casa Vivienda Esmeralda</option>
+        </select>
+
+        <!-- CONFIGURACIÓN -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="#">
+
+        <button type="submit" class="btn-guardar">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+  <!-- SCRIPT DE NOTIFICACIÓN -->
+  <script>
+    document.getElementById("formContacto").addEventListener("submit", function (e) {
+      e.preventDefault(); // Detiene envío temporalmente
+      const form = this;
+
+      Swal.fire({
+        title: "Formulario enviado",
+        text: "Gracias por contactarnos. Te responderemos pronto.",
+        icon: "success",
+        confirmButtonText: "Aceptar"
+      }).then(() => {
+        form.submit(); // Enviar después de aceptar
+      });
+    });
+  </script>
+
+  <script>
+  // Cargar componentes HTML en sus contenedores
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("components/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("components/loader.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("loader-placeholder").innerHTML = data);
+
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  });
+</script> 
+
+</body>
+</html>
